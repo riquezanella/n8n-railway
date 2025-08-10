@@ -6,7 +6,8 @@ const path = require('path');
 process.env.N8N_HOST = '0.0.0.0';
 process.env.N8N_PORT = process.env.PORT || 5678;
 process.env.N8N_PROTOCOL = 'https';
-process.env.WEBHOOK_URL = process.env.RAILWAY_STATIC_URL || 'https://n8n-railway-production.up.railway.app/';
+// Usa a URL do domínio personalizado se estiver configurada, senão usa a do Railway
+process.env.WEBHOOK_URL = process.env.CUSTOM_DOMAIN || process.env.RAILWAY_STATIC_URL || 'https://n8n.henriquezanella.com.br/';
 process.env.GENERIC_TIMEZONE = 'America/Sao_Paulo';
 process.env.NODE_ENV = 'production';
 
