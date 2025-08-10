@@ -1,0 +1,20 @@
+{
+  "name": "n8n-railway-app",
+  "version": "1.0.0",
+  "description": "n8n automation platform hosted on Railway",
+  "main": "server.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "n8n": "^1.48.4"
+  },
+  "scripts": {
+    "start": "n8n start",
+    "dev": "n8n start",
+    "build": "echo 'No build step needed'"
+  },
+  "keywords": ["n8n", "automation", "workflow"],
+  "author": "Henrique Zanella",
+  "license": "MIT"
+}
