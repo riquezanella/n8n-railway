@@ -1,0 +1,5 @@
+# Ignora arquivos de log e dados locais
+*.log
+.env
+node_modules/
+.DS_Store
