@@ -11,16 +11,16 @@ process.env.GENERIC_TIMEZONE = 'America/Sao_Paulo';
 process.env.NODE_ENV = 'production';
 
 console.log('🚀 Iniciando n8n através do servidor personalizado...');
-console.log(🌐 Host: ${process.env.N8N_HOST});
-console.log(🔌 Porta: ${process.env.N8N_PORT});
-console.log(🔗 Webhook URL: ${process.env.WEBHOOK_URL});
+console.log(`🌐 Host: ${process.env.N8N_HOST}`);
+console.log(`🔌 Porta: ${process.env.N8N_PORT}`);
+console.log(`🔗 Webhook URL: ${process.env.WEBHOOK_URL}`);
 
 // Função que inicia o n8n como um processo filho
 function startN8N() {
     // Encontra o caminho correto para o executável do n8n
     const n8nPath = path.join(__dirname, 'node_modules', '.bin', 'n8n');
 
-    console.log(🔍 Procurando n8n em: ${n8nPath});
+    console.log(`🔍 Procurando n8n em: ${n8nPath}`);
 
     // Inicia o processo do n8n
     const n8nProcess = spawn('node', [n8nPath, 'start'], {
@@ -35,7 +35,7 @@ function startN8N() {
     });
 
     n8nProcess.on('exit', (code) => {
-        console.log(⚠️ n8n terminou com código: ${code});
+        console.log(`⚠️ n8n terminou com código: ${code}`);
         if (code !== 0) {
             console.log('🔄 Tentando reiniciar n8n...');
             setTimeout(startN8N, 5000); // Reinicia após 5 segundos
@@ -47,4 +47,3 @@ function startN8N() {
 
 // Inicia o n8n
 startN8N();
-
