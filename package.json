@@ -1,7 +1,7 @@
 {
-  "name": "n8n-render-app",
+  "name": "n8n-railway-app",
   "version": "1.0.0",
-  "description": "n8n automation platform optimized for Render.com",
+  "description": "n8n automation platform hosted on Railway",
   "main": "server.js",
   "engines": {
     "node": ">=18.0.0"
@@ -10,17 +10,11 @@
     "n8n": "^1.48.4"
   },
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
-    "build": "echo 'Build completed - no additional build steps required'",
-    "postinstall": "echo 'Dependencies installed successfully'"
+    "start": "n8n start",
+    "dev": "n8n start",
+    "build": "echo 'No build step needed'"
   },
-  "keywords": ["n8n", "automation", "workflow", "render"],
+  "keywords": ["n8n", "automation", "workflow"],
   "author": "Henrique Zanella",
-  "license": "MIT",
-  "render": {
-    "type": "web",
-    "buildCommand": "npm install",
-    "startCommand": "npm start"
-  }
+  "license": "MIT"
 }
